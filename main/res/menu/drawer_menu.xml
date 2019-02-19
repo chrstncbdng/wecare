@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_learn"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_learn"
+            android:title="Learn" />
+        <item
+            android:id="@+id/nav_quiz"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_quiz"
+            android:title="Take Quiz" />
+        <item
+            android:id="@+id/nav_chat"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_chat"
+            android:title="Talk to Doctor Bot" />
+    </group>
+
+    <group android:id="@+id/menu_middle">
+        <item
+            android:id="@+id/nav_profile"
+            android:checkable="true"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_share"
+            android:checkable="false"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_share"
+            android:title="Share" />
+        <item
+            android:id="@+id/nav_rate"
+            android:checkable="false"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_rate"
+            android:title="Rate Us" />
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_about"
+            android:title="About WeCare" />
+        <item
+            android:id="@+id/nav_logout"
+            android:checkable="false"
+            android:fontFamily="@font/roboto"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+
+    </group>
+
+</menu>

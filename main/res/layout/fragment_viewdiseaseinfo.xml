@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLight"
+    android:padding="10dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/reference"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorAccent"
+        android:padding="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_below="@+id/description"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp" />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/cause_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Causes"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="21sp" />
+
+                <ListView
+                    android:id="@+id/causes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/cause_text"
+                    android:layout_marginTop="5dp"
+                    android:divider="@color/colorAccent"
+                    android:dividerHeight="2dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/risk_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Risks"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="21sp" />
+
+                <ListView
+                    android:id="@+id/risks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/risk_text"
+                    android:layout_marginTop="5dp"
+                    android:divider="@color/colorAccent"
+                    android:dividerHeight="2dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/symp_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Symptoms"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="21sp" />
+
+                <ListView
+                    android:id="@+id/symptoms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/symp_text"
+                    android:layout_marginTop="5dp"
+                    android:divider="@color/colorAccent"
+                    android:dividerHeight="2dp" />
+
+            </RelativeLayout>
+
+        </ViewFlipper>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/reference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear_layout"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto"
+        android:text="Reference: "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="Previous"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorLight" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="Next"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorLight" />
+
+    </LinearLayout>
+
+</RelativeLayout>
